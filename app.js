@@ -20,7 +20,7 @@ function buildData(dataOut){
     main.innerHTML = "";
     // Filter for Free/Paid and both services
     for(data of dataOut){
-        if(cost!="all") 
+        if(cost!="All") 
             if(data.fee_type != cost)
                 continue;
 
@@ -42,8 +42,8 @@ function buildData(dataOut){
         name.innerText = data.name;
         vaccine_type.innerText = data.vaccine;
         address.innerText = data.address;
-        from.innerText = "From: " + data.from;
-        to.innerText = " To: "+data.to;
+        from.innerText = "Timing: " + data.from;
+        to.innerText = " To "+data.to;
         avail_dose1.innerText = "Dose 1: "+data.available_capacity_dose1;
         avail_dose2.innerText = " Dose 2: "+data.available_capacity_dose2;
         if(data.max_age_limit == undefined)
