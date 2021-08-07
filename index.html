@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cowin Vaccine Locator</title>
+    <title>Covid Vaccine Locator</title>
+    <style>
+       p{
+         width: 100px;
+        }
+    </style>
 </head>
 <body>
     <center>
-        <h1>Cowin Vaccine Locator</h1>
+        <div style="background-color:lightcyan;">
+        <h1 style="margin-top: 0;">Cowin Vaccine Locator</h1>
         <div class="" id="INPUTS">
             <div id="input-Pin">
                 <label for="Pin">Pin Code</label>
@@ -18,17 +24,30 @@
                 <label for="Date">Appointment For Date</label>
                 <input type="text" name="Date" id="Date" value="08-08-2021">
             </div>
-            <button class="" id="Button">
+            <div id="Costs">
+                <label for="Cost">Cost</label>
+                <select name="Cost" id="Cost">
+                    <option value="Free">Free</option>
+                    <option value="Paid">Paid</option>
+                    <option value="all">All</option>
+                </select>
+            </div>
+            <button class="" id="Search">
                 Search
             </button>
         </div>
-        <hr id="Separate_Input_And_Output">
+            <button class="" id="Reset">
+                Reset
+            </button>
+            <hr id="Separate_Input_And_Output">
+        </div>
+        
 
         <div id="main-Container" style="width: 96%;">
 
         </div>
     </center>
-    <footer style="background-color:cornsilk; position: static;bottom: 0;height: 30px; font-size: 20px;">
+    <footer style="background-color:cornsilk; position: fixed;bottom: 0;height: 30px; font-size: 20px;width: 100%;text-align: center;" id="footer">
             Site is Made by Karan Banjade using Open API from apisetu.gov.in
     </footer>
     <script src="app.js"></script>
